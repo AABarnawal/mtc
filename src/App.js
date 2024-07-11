@@ -41,12 +41,10 @@ function App() {
       <Navbar Loginstatus={LoginStatue} />
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
-      <BrowserRouter basename='/mtc'>
         <Routes>
-        <Route exact path="/mtc" element={<MainPage />} />
+        <Route exact path="/" element={<MainPage />} />
         <Route path="/login" element={ <LoginPageList />} />
         </Routes>
-      </BrowserRouter>
       {/* <HashRouter>
       <Routes>
           {LoginStatue ? (
