@@ -42,8 +42,8 @@ function App() {
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
         <Routes>
-        <Route exact path="/" element={<MainPage />} />
-        <Route path="/login" element={ <LoginPageList />} />
+        <Route exact path="mtc/" element={<MainPage />} />
+        <Route path="mtc/login" element={ <LoginPageList />} />
         </Routes>
       {/* <HashRouter>
       <Routes>
