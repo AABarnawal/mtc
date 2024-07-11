@@ -6,7 +6,7 @@ import LoginForm from './Popups/Login';
 import Contact from './Home/Resources/Contact';
 import Resources from './Home/Resources/Resources';
 import Gallery from './Home/Resources/Gallery';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import DashBoard from './Dashboard/DashBoard';
 import ChildRegistration from './childRegistration/ChildRegistration';
@@ -44,19 +44,19 @@ function App() {
       <Navbar Loginstatus={LoginStatue} />
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
-      <BrowserRouter basename='/mtc'>
-      <Routes>
+
+      {/* <Routes> */}
           {LoginStatue ? (
-            <Route> 
-              <Route exact path="/mtc" element={<MainPage />} />
+            <Routes> 
+              <Route exact path="/" element={<MainPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/Resources/ShowResource" element={<Resources />} />
               <Route path="/Resources/Gallery" element={<Gallery />} />
               <Route path="/Resources/Contact" element={<Contact />} />
               <Route path="/login" element={ <LoginPageList />} />
-            </Route>
+            </Routes>
           ):(
-          <Route>
+          <Routes>
             <Route  path="/DashBoard" element={ <DashBoard />} />
             <Route  path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} />
             <Route  path="/DashBoard/DailyWeight" element={ <DailyWeight/> } />
@@ -73,11 +73,11 @@ function App() {
             
             {/*<Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} />
             <Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} /> */}
-          </Route>
+          </Routes>
           ) }
         
-      </Routes>
-    </BrowserRouter>
+      {/* </Routes> */}
+
     <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
       <MyFooter isLogin={LoginStatue}  />
 
