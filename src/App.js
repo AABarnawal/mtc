@@ -41,7 +41,13 @@ function App() {
       <Navbar Loginstatus={LoginStatue} />
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
-      <HashRouter>
+      <BrowserRouter basename='/mtc'>
+        <Routes>
+        <Route exact path="/mtc" element={<MainPage />} />
+        <Route path="/login" element={ <LoginPageList />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <HashRouter>
       <Routes>
           {LoginStatue ? (
             <Route path="/mtc"> 
@@ -67,14 +73,11 @@ function App() {
             <Route  path="/DashBoard/DischargeForm" element={ <DischargeForm />} /> 
             <Route  path="/DashBoard/Followup" element={ <Followup />} />
             <Route  path="/DashBoard/FollowupForm" element={ <FollowupForm/>} />
-            
-            {/*<Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} />
-            <Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} /> */}
           </Route>
           ) }
         
       </Routes>
-    </HashRouter>
+    </HashRouter> */}
     <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
       <MyFooter isLogin={LoginStatue}  />
 
