@@ -2,11 +2,10 @@ import Navbar from './Components/Navbarcom';
 import './App.css';
 import MyFooter from './Components/Footer';
 import MainPage from './Home/MainPage';
-import LoginForm from './Popups/Login';
 import Contact from './Home/Resources/Contact';
 import Resources from './Home/Resources/Resources';
 import Gallery from './Home/Resources/Gallery';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import DashBoard from './Dashboard/DashBoard';
 import ChildRegistration from './childRegistration/ChildRegistration';
@@ -42,19 +41,19 @@ function App() {
       <Navbar Loginstatus={LoginStatue} />
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
-      <BrowserRouter basename='/mtc'>
-      {/* <Routes> */}
+      <HashRouter>
+      <Routes>
           {LoginStatue ? (
-            <Routes> 
-              <Route path="/" element={<MainPage />} />
+            <Route path="/mtc"> 
+              <Route path="/*" element={<MainPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/Resources/ShowResource" element={<Resources />} />
               <Route path="/Resources/Gallery" element={<Gallery />} />
               <Route path="/Resources/Contact" element={<Contact />} />
               <Route path="/login" element={ <LoginPageList />} />
-            </Routes>
+            </Route>
           ):(
-          <Routes>
+          <Route path="/mtc">
             <Route  path="/DashBoard" element={ <DashBoard />} />
             <Route  path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} />
             <Route  path="/DashBoard/DailyWeight" element={ <DailyWeight/> } />
@@ -71,11 +70,11 @@ function App() {
             
             {/*<Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} />
             <Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} /> */}
-          </Routes>
+          </Route>
           ) }
         
-      {/* </Routes> */}
-    </BrowserRouter>
+      </Routes>
+    </HashRouter>
     <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
       <MyFooter isLogin={LoginStatue}  />
 
