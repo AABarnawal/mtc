@@ -53,7 +53,7 @@ function App() {
               <Route path="Resources/ShowResource" element={<Resources />} />
               <Route path="Resources/Gallery" element={<Gallery />} />
               <Route path="Resources/Contact" element={<Contact />} />
-              <Route path="/login" element={ <LoginPageList />} />
+              <Route path="mtc/login" element={ <LoginPageList />} />
             </Route>
           ):(
           <Route>
