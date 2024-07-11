@@ -45,7 +45,6 @@ function App() {
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
 
-      {/* <Routes> */}
           {LoginStatue ? (
             <Routes> 
               <Route path="/" element={<MainPage />} />
@@ -75,8 +74,6 @@ function App() {
             <Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} /> */}
           </Routes>
           ) }
-        
-      {/* </Routes> */}
 
     <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
       <MyFooter isLogin={LoginStatue}  />
