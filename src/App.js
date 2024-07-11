@@ -44,16 +44,16 @@ function App() {
       <Navbar Loginstatus={LoginStatue} />
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
-      <BrowserRouter>
+      <BrowserRouter basename='/mtc'>
       <Routes>
           {LoginStatue ? (
             <Route> 
               <Route path="*" element={<MainPage />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="Resources/ShowResource" element={<Resources />} />
-              <Route path="Resources/Gallery" element={<Gallery />} />
-              <Route path="Resources/Contact" element={<Contact />} />
-              <Route path="mtc/login" element={ <LoginPageList />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/Resources/ShowResource" element={<Resources />} />
+              <Route path="/Resources/Gallery" element={<Gallery />} />
+              <Route path="/Resources/Contact" element={<Contact />} />
+              <Route path="/login" element={ <LoginPageList />} />
             </Route>
           ):(
           <Route>
