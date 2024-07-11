@@ -1,0 +1,49 @@
+/* Message.css */
+
+.containeer{
+    padding: 10px;
+    height: 90vh;
+    margin: 0;
+    background-color:"white";
+  }
+  
+.white-section h2{
+    font-size: 32px;
+    color: #077c78;
+    margin-bottom: 1.5rem; /* Adjust margin */
+}
+  
+.white-section  p {
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Adjust line spacing */
+    margin-bottom: 1.5rem; /* Adjust margin */
+  }
+  
+  .white-section  h4 {
+    font-size: 18px; /* Adjust font size */
+    color: #077c78;
+    margin-bottom: 0.5rem; /* Adjust margin */
+  }
+.contents{
+    width:95%;
+}
+
+
+  .white-section {
+    background-color: white;
+    padding: 1rem;
+    text-align: left;
+    padding-left: 80px;
+    padding-top: 50px;
+  }
+  
+  .green-section {
+    background-color: #077c78;
+    text-align: center;
+    padding: 5rem; /* Add some padding */
+    height: 70vh;
+    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  
+ 
+  

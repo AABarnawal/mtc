@@ -1,0 +1,9 @@
+.cardscom {
+    transition: box-shadow .2s;
+    border-radius:10px;
+    float: left;
+    
+  }
+  .cardscom:hover {
+    box-shadow: 2px 2px 11px rgba(255, 253, 253, 0.945); 
+  }

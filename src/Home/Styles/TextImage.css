@@ -1,0 +1,38 @@
+.text-image-container {
+    display: flex; /* Arrange elements side-by-side */
+    width: 100%; /* Span the full width */
+  }
+  
+  .text-column {
+    /*flex: 1;  Allocate remaining space to text column */
+    padding: 2rem; /* Add some padding */
+    background-color: #0b918c; /* Light background color */
+    color: white;
+  }
+  
+  .image-container {
+    flex: 0 0 50%; /* Fixed width for image container */
+    position: relative; /* Required for fixed background image */
+  }
+  
+  .image {
+    width: 100%; /* Image width spans the container */
+    height: 100%; /* Image height spans the container */
+    object-fit: cover; /* Scale image to cover the container */
+    position: fixed; /* Fix the image to the background */
+    top: 0; /* Position image at the top */
+    left: 0; /* Position image at the left */
+    z-index: -1; /* Place image behind the text column */
+  }
+  
+
+
+
+  /* TextImage.css */
+/* 
+.text-image-container {
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1rem; 
+} */
