@@ -6,7 +6,7 @@ import LoginForm from './Popups/Login';
 import Contact from './Home/Resources/Contact';
 import Resources from './Home/Resources/Resources';
 import Gallery from './Home/Resources/Gallery';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import DashBoard from './Dashboard/DashBoard';
 import ChildRegistration from './childRegistration/ChildRegistration';
@@ -19,8 +19,6 @@ import Maternal from './Maternal/Maternal';
 import MaternalForm from './Maternal/MaternalForm';
 import store from './redux/store';
 import { Provider } from 'react-redux';
-import SamarRegistration from './Samarchild/SamarRegistration';
-import Samarregisterform from './Samarchild/Samarregisterform';
 import Discharge from './Discharge/Discharge';
 import DischargeForm from './Discharge/DischargeForm';
 import Followup from './Followup/Followup';
@@ -44,7 +42,8 @@ function App() {
       <Navbar Loginstatus={LoginStatue} />
 
       <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
-
+      <BrowserRouter basename='/mtc'>
+      {/* <Routes> */}
           {LoginStatue ? (
             <Routes> 
               <Route path="/" element={<MainPage />} />
@@ -74,7 +73,9 @@ function App() {
             <Route path="/DashBoard/ChildRegistration" element={ <ChildRegistration />} /> */}
           </Routes>
           ) }
-
+        
+      {/* </Routes> */}
+    </BrowserRouter>
     <separator style={{marginTop:"2000px"}} ><br/><br/><br/><br/><br /> <br/> <br/></separator>
       <MyFooter isLogin={LoginStatue}  />
 
