@@ -48,7 +48,7 @@ function App() {
       <Routes>
           {LoginStatue ? (
             <Route> 
-              <Route path="*" element={<MainPage />} />
+              <Route exact path="/mtc" element={<MainPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/Resources/ShowResource" element={<Resources />} />
               <Route path="/Resources/Gallery" element={<Gallery />} />
